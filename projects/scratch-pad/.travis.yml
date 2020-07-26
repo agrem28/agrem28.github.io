@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+  - "4.0"
+  
+notifications:
+  email:
+    - john@operationspark.org
+    - max@operationspark.org
+  slack: operationspark:IVZ9qgp3Ge6RTeSl7nftvktM
+  webhooks: https://greenlight.operationspark.org/api/webhooks/travisci
+  
+
