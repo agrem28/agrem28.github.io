@@ -1,0 +1,15 @@
+{
+  "name": "studies-v2",
+  "private": true,
+  "version": "0.0.0",
+  "dependencies": {
+    "chai": "~3.5.0",
+    "mocha": "^3.4.1"
+  },
+  "scripts": {
+    "pretest": "npm install",
+    "test": "mocha ./test/index.spec.js || :",
+    "posttest": "rm -rf ../studies"
+  },
+  "devDependencies": {}
+}

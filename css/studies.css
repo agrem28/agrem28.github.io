@@ -68,10 +68,10 @@ main {
     background: #eee;
     border: 1px solid #ccc;
     color: #222;
-    white-space: pre;
+    white-space: normal;
     width: 100%;
     margin-bottom: 20px;
-    overflow: scroll;
+    overflow: auto;
 }
 
 .topic-heading {
