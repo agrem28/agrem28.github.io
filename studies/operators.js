@@ -2,7 +2,7 @@
 * OPERATORS:
 * 
 * 0. Operators are the symbols used in the initialization and manipulation of data. This includes 
-* assignment, arithmetic, comparison, logical unary and ternary operators.
+* assignment, arithmetic, comparison, logical unary and ternary operators. 
 * 
 * 
 * 

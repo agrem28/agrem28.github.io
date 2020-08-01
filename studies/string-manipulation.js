@@ -1,13 +1,15 @@
 /*
 * STRING MANIPULATION:
 * 
-* 
-* 
+* 0. Strings are a primitve data type made up of a sequence of characters. They are used
+* to display data in the form of text. 
 * 
 * 
 */
 
 // 1. Operators //
+// Characters in a string can be accessed by its index in much the same way as an array.
+//    The first character is index 0 and the last is string.length-1;
 // Concatonation is used to join two strings into one.
 var str = "Andrew " + "Gremillion"; // str = Andrew Gremillion
 // The \ character is used to insert a character that would otherwise disrupt a string.

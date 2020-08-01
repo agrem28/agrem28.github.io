@@ -50,9 +50,3 @@ myVariable = "someString";
 // console.log(newVar); // ReferenceError: newVar is not defined
 const constant = 3;
 // constant = 4; // TypeError: Assignment to constant variable
-
-const weather = 'sunny';
-if(weather === 'sunny') {
-    const message = 'nice day, eh?';
-}
-console.log(message);
