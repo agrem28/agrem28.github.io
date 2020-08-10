@@ -22,30 +22,4 @@
 
 // //contacts.printAllObjects();
 
-function nonFriends(name, array) {
-    var newArray = [];
-    // for (let i = 0; i < array.length; i++) {
-    //     if (!(array[i].name === name)) {
-    //         if (array[i].friends && array[i].friends.length > 0) {
-    //             for (let j = 0; j < array[i].friends.length; j++) {
-    //                 if (array[i].friends[j] === name) {
-    //                     break;
-    //                 }
-    //             } newArray.push(array[i].name);
-    //         }
-    //     }
-    // }
-    for (var i = 0; i < array.length; i++) {
-        if (!array[i].friends.includes(name) && array[i].name !== name) {
-            newArray.push(array[i].name);
-        }
-    }
-    return newArray;
-}
-var data = [
-        {name: "Jimmy", friends:["Sara", "Liza"]},
-        {name: "Bob", friends:[]},
-        {name: "Liza", friends: ["Jimmy"]},
-        {name: "Sara", friends: ["Jimmy"]}
-      ];
-console.log(nonFriends("Jimmy", data));
+console.log(Array.from('$2,123.50'));
