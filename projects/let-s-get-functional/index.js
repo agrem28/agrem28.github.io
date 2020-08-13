@@ -81,6 +81,7 @@ var friendFirstLetterCount = function(array, customer, letter) {
 };
 
 var friendsCount = function(array, name) {
+    //
     return _.reduce(array, function(seed, customerObj){
         for (let element of customerObj.friends) {
             if (element.name === name) seed.push(customerObj.name);
@@ -90,7 +91,7 @@ var friendsCount = function(array, name) {
 };
 
 var topThreeTags = function(array) {
-    var tagsObj = [];
+    var tagsObj = {};
     for (let element of array) {
         for (let tag of element.tags) {
             if (tagsObj.hasOwnProperty(tag)) {

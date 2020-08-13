@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+  - "7"
+dist: trusty # needs Ubuntu Trusty
+cache:
+  yarn: true
+  directories:
+    - node_modules
+install:
+  - yarn
+script:
+  - yarn test
+notifications:
+  webhooks: https://greenlight.operationspark.org/api/v2/webhooks/travisci

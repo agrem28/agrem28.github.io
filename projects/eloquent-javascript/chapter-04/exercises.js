@@ -115,8 +115,36 @@ function nth(list, n) {
 // deepEqual ///////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
+//function deepEqual(value1, value2) {
+//   if (!(value1 instanceof Object) && !(value2 instanceof Object)) {
+//     return value1 === value2;
+//   } else if (value1 === null || value2 === null) {
+//     return false;
+//   } else {
+//     if (Object.keys(value1).length === 0) {
+//       if (Object.keys(value2).length === 0) {
+//         return true;
+//       } else return false;
+//     } else if (Object.keys(value2).length === 0) return false;
+//     return deepEqual(Object.keys(value1)[0], Object.keys(value2)[0]);
+//   }
+// }
+
 function deepEqual(value1, value2) {
-  
+  if (value1 === value2) return true; // if both value1 and value2 are null or undefined and exactly the same
+  if (!(value1 instanceof Object) || !(value2 instanceof Object)) return false; // if they are not strictly equal, they both need to be Objects
+  if (typeof value1 !== typeof value2) return false;
+  for (var p in value1) {
+    if (!value1.hasOwnProperty(p)) continue;
+    if (!value2.hasOwnProperty(p)) return false; // allows to compare value1[p] and value2[p] when set to undefined
+    if (value1[p] === value2[p]) continue; // if they have the same strict value or identity then they are equal
+    if (typeof(value1[p]) !== "object") return false; // Numbers, Strings, Functions, Booleans must be strictly equal
+    if (!deepEqual(value1[p], value2[p])) return false; // Objects and Arrays must be tested recursively
+  }
+  for (p in value2) {
+    if (value2.hasOwnProperty(p) && !value1.hasOwnProperty(p)) return false;
+  }
+  return true;
 }
 
 ////////////////////////////////////////////////////////////////////////////////

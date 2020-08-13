@@ -301,7 +301,7 @@ describe('Eloquent JavaScript', function () {
         expect(deepEqual(1, 2)).to.equal(false);
       });
       it("should compare two falsey values", function () {
-        expect(deepEqual(null, undefined)).to.equal(false);
+        expect(deepEqual(0, "")).to.equal(false);
       });
       it("should compare two objects with the same properties and values", function () {
         expect(deepEqual({

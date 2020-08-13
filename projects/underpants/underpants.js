@@ -152,7 +152,7 @@ _.indexOf = function(array, value) {
 
 _.contains = function(array, value) {
     return array.includes(value);
-}
+};
 
 /** _.each
 * Arguments:

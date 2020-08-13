@@ -22,4 +22,19 @@
 
 // //contacts.printAllObjects();
 
-console.log(Array.from('$2,123.50'));
+function CaesarCipher(str, num) {
+
+    str = str.toLowerCase();
+    var result = '';
+    var charcode = 0;
+
+    for (let i = 0; i < str.length; i++) {
+        if (str[i].match(/[a-z]/i)){
+            charcode = (str[i].charCodeAt()) + num;
+            result += String.fromCharCode(charcode);
+        } else result += str[i];
+    }
+    return result;
+
+}
+console.log(CaesarCipher("he$l!l&o1", 1));
