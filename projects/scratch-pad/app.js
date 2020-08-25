@@ -22,19 +22,11 @@
 
 // //contacts.printAllObjects();
 
-function CaesarCipher(str, num) {
+// var x = 30;
 
-    str = str.toLowerCase();
-    var result = '';
-    var charcode = 0;
+// function get (x) { return x; }
+// function set (value) { x = value; }
 
-    for (let i = 0; i < str.length; i++) {
-        if (str[i].match(/[a-z]/i)){
-            charcode = (str[i].charCodeAt()) + num;
-            result += String.fromCharCode(charcode);
-        } else result += str[i];
-    }
-    return result;
+// set(10);
+// var result = get(20);
 
-}
-console.log(CaesarCipher("he$l!l&o1", 1));
